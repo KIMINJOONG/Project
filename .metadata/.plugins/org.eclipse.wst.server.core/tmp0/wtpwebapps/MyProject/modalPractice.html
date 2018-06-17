@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-<!-- ÇÕÃÄÁö°í ÃÖ¼ÒÈ­µÈ ÃÖ½Å CSS -->
+<!-- í•©ì³ì§€ê³  ìµœì†Œí™”ëœ ìµœì‹  CSS -->
 <link rel="stylesheet" href="bootstrap-3.3.2-dist/bootstrap/css/bootstrap.min.css">
 
-<!-- ºÎ°¡ÀûÀÎ Å×¸¶ -->
+<!-- ë¶€ê°€ì ì¸ í…Œë§ˆ -->
 <link rel="stylesheet" href="bootstrap-3.3.2-dist/bootstrap/css/bootstrap-theme.min.css">
 
-<!-- ÇÕÃÄÁö°í ÃÖ¼ÒÈ­µÈ ÃÖ½Å ÀÚ¹Ù½ºÅ©¸³Æ® -->
+<!-- í•©ì³ì§€ê³  ìµœì†Œí™”ëœ ìµœì‹  ìë°”ìŠ¤í¬ë¦½íŠ¸ -->
 <script src="bootstrap-3.3.2-dist/bootstrap/js/bootstrap.min.js"></script>
 <script>
 $('#myModal').on('shown.bs.modal', function () {
@@ -20,16 +20,45 @@ $('#myModal').on('shown.bs.modal', function () {
 </script>
 </head>
 <body>
-<button class="btn btn-default" data-target="#layerpop" data-toggle="modal">¸ğ´ŞÃâ·Â¹öÆ°</button><br/>
+<a href="#layerpop" data-toggle="modal">ëª¨ë‹¬</a>
+<button class="btn btn-default" data-target="#layerpop" data-toggle="modal">ëª¨ë‹¬ì¶œë ¥ë²„íŠ¼</button><br/>
 <div class="modal fade" id="layerpop">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <h4 class="modal-title"><b>íšŒì›ê°€ì…</b></h4>
       </div>
       <div class="modal-body">
-        <p>One fine body&hellip;</p>
+        <div class="container-fluid">
+        	<div class="row">
+		        <div class="col-md-3">ì•„ì´ë””</div>
+		        <div class="col-md-6">
+		        	<input type="text" />
+		        </div>
+		        <div class="col-md-3">
+		        	<button>ì¤‘ë³µí™•ì¸</button>
+		        </div>
+	    	</div>
+	    	<div class="row" style="margin-top: 5px;">
+		        <div class="col-md-3">ë¹„ë°€ë²ˆí˜¸</div>
+		        <div class="col-md-6">
+		        	<input type="text" />
+		        </div>
+	    	</div>
+	    	<div class="row" style="margin-top: 5px;">
+		        <div class="col-md-3">ë¹„ë°€ë²ˆí˜¸ í™•ì¸</div>
+		        <div class="col-md-6">
+		        	<input type="text" />
+		        </div>
+	    	</div>
+        	<div class="row" style="margin-top: 5px;">
+		        <div class="col-md-3">ì´ë¦„</div>
+		        <div class="col-md-6">
+		        	<input type="text" />
+		        </div>
+	    	</div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

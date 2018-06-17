@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="bootstrap-3.3.2-dist/bootstrap/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="bootstrap-3.3.2-dist/bootstrap/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="bootstrap-3.3.2-dist/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/mainCss.css">
+<script>
+function idCheck(){
+	var id = document.getElementById("joinFormId").value;
+	alert("입력하신 id는 " + id + "입니다.");
+}
+
+function pwCheck() {
+	var pw = document.getElementById("joinFormPw").value;
+	var pw2 = document.getElementById("joinFormPw2").value;
+	if (pw == pw2) {
+		jQuery("joinFormPw").css("border","1px").("border-color","green");
+		jQuery("joinFormPw2").css("border","1px").("border-color","green");
+	} else {
+		alert("비밀번호가 일치하지않습니다.");
+	}
+}
+
+</script>
+</head>
+<body>
+    <!-- 회원가입 모달시작 -->
+<div class="modal fade" id="joinModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><b>회원가입</b></h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+        	<div class="row">
+		        <div class="col-md-4 joinModal">아이디</div>
+		        <div class="col-md-4">
+		        	<input type="text" class="joinModalInput" id="joinFormId"/>
+		        </div>
+		        <div class="col-md-4" align="left">
+		        	<button type="button" class="btn btn-default btn-sm" onclick="idCheck();">중복확인</button>
+		        </div>
+	    	</div>
+	    	<div class="row" style="margin-top: 5px;">
+		        <div class="col-md-4 joinModal">비밀번호</div>
+		        <div class="col-md-7">
+		        	<input type="password" class="joinModalInput" id="joinFormPw"/>
+		        </div>
+	    	</div>
+	    	<div class="row" style="margin-top: 5px;">
+		        <div class="col-md-4 joinModal">비밀번호 확인</div>
+		        <div class="col-md-7">
+		        	<input type="password" class="joinModalInput" id="joinFormPw2" onkeydown="pwCheck();"/>
+		        </div>
+	    	</div>
+        	<div class="row" style="margin-top: 5px;">
+		        <div class="col-md-4 joinModal">이름</div>
+		        <div class="col-md-7">
+		        	<input type="text" class="joinModalInput" />
+		        </div>
+	    	</div>
+	    	<div class="row" style="margin-top: 5px;">
+		        <div class="col-md-4 joinModal">유형</div>
+		        <div class="col-md-7">
+		        	<input type="radio" />댄서
+		        	<input type="radio" style="margin-left: 3px;"/>클라이언트
+		        </div>
+	    	</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+        <button type="button" class="btn btn-primary">가입</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>  
+
+<!-- 회원가입 모달 끝 -->
+
+    <!-- 로그인 모달시작 -->
+<div class="modal fade" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><b>로그인</b></h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+        	<div class="row">
+		        <div class="col-md-4 loginModal">아이디</div>
+		        <div class="col-md-8">
+		        	<input type="text" />
+		        </div>
+	    	</div>
+	    	<div class="row" style="margin-top: 5px;">
+		        <div class="col-md-4 loginModal">비밀번호</div>
+		        <div class="col-md-8">
+		        	<input type="password" />
+		        </div>
+	    	</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-primary">로그인</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div> 
+<!-- 로그인모달끝 -->
+    <div class="row" id="joinAndLogin">
+    	<div class="col-md-offset-8 col-md-1">
+    		<a href="#loginModal" data-toggle="modal">로그인</a>
+    	</div>
+        <div class="col-md-1">
+        	<a href= "#joinModal" data-toggle="modal">회원가입</a>
+        </div>
+<!--         <div class="col-sm-offset-6 col-sm-2">로그인</div> -->
+<!--         <div class="col-sm-2">회원가입</div> -->
+    </div>
+    <div class="row" id="topMenu">
+    	<div class="col-md-offset-4 col-md-2">댄스팀</div>
+        <div class="col-md-2">리쿠르팅</div>
+    </div>
+    <div class="row" style="margin-bottom: 50px;">
+        <div class="col-xs-12">
+        	<img alt="" src="img/imgCenterDiv.jpg" style="width: 100%; height: 30%;">
+        </div>
+    </div>
+    <div class="row" id="imgCenterDiv">
+        <div class="col-xs-12">
+        	<div class="col-md-offset-3 col-md-3 box">
+        		<div class="box" style="width: 100%; height: 100%">
+        			<img alt="" src="img/imgDanceTeam.png" style="width: 100%;">
+        		</div>
+        		
+        	</div>
+        	<div class="col-md-3 box">
+        		<div class="box" style="width: 100%;height: 100%;">
+        			<img alt="" src="img/imgRecruiting.png" style="width: 100%;" />
+        		</div>
+        		
+        	</div>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-xs-12">푸터딥,</div>
+    </div>
+</body>
+</html>
